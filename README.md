@@ -26,7 +26,7 @@ sudo cp build/bin/geth /usr/local/bin/
 or, to build the full suite of utilities:
 
 ```shell
-cd go-altcoinchain
+cd go-chain
 make all
 sudo cp build/bin/geth /usr/local/bin/
 
@@ -41,7 +41,7 @@ generate genesis ```
 geth -datadir /path/to/data/dir init /path/to/genesis.json```
 
 Start daemon for mining ```
-geth --mine --http --networkid 2330 --datadir /path/to/data/dir```
+geth --mine --http --networkid 6105 --datadir /path/to/data/dir```
 
 Attach a console ```
 geth attach /path/to/data/dir/geth.ipc```
