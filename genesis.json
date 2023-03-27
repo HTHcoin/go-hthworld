@@ -17,7 +17,7 @@
      { "balance": "0x69DCC61D6A958B130000000000000000" }
   },
   "coinbase": "0x0000000000000000000000000000000000000000",
-  "difficulty": "0xE8D4A51000",
+  "difficulty": "0x1F0AEE8C5",
   "extraData": "",
   "gasLimit": "0x2fefd8",
   "nonce": "0x0000000000000042",
