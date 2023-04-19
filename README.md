@@ -1,6 +1,6 @@
-## Go Altcoinchain
+## Go-Chain
 
-Official Golang implementation of the Altcoinchain protocol.
+Official Golang implementation of the Go-Chain protocol.
 
 [![API Reference](
 https://camo.githubusercontent.com/915b7be44ada53c290eb157634330494ebe3e30a/68747470733a2f2f676f646f632e6f72672f6769746875622e636f6d2f676f6c616e672f6764646f3f7374617475732e737667
@@ -17,8 +17,8 @@ Building `geth` requires both a Go (version 1.16 or later) and a C compiler. You
 them using your favourite package manager. Once the dependencies are installed, run
 
 ```shell
-git clone https://github.com/Altcoinchain/go-altcoinchain.git
-cd go-altcoinchain
+git clone https://github.com/MichaelHDesigns/go-chain.git
+cd go-chain
 make geth
 sudo cp build/bin/geth /usr/local/bin/
 ```
@@ -32,7 +32,7 @@ sudo cp build/bin/geth /usr/local/bin/
 
 ```
 
-## Start ALT Altcoinchain
+## Start GoC Go-Chain
 
 create an account```
 geth account new --datadir /path/to/data/dir```
@@ -47,7 +47,7 @@ Attach a console ```
 geth attach /path/to/data/dir/geth.ipc```
 
 Add enodes 
-```admin.addPeer("enode://448f7d24183a57d4dd6c8769e55621ecc8362215f6c2d22c363953f392fb572cbbb382a6324997445b2340f44a1bd2b7b76d80b2e0efb05a2627aa9f62aa4440@154.12.237.243:30305")```
+```admin.addPeer("enode://f5c4b28de975b622819ecfc1fea38504ae2522c0d542a43e4bd8ff7a5c60a4b2c2b324e95a5103d8ec14233a6e7b925333659ccfb23edbc4688f34f14863d8ba@206.189.231.104:30303")```
 
 ```admin.addPeer("enode://3a1f8dc38b7def6336765e37acb52b7520ae710448ca8814fce82ef89a6a3f4fe60c497bae5982168381388cd8d131155d77585ce1577727fbfc62beb261993d@144.76.202.175:30303")```
 
@@ -66,14 +66,14 @@ directory.
 
 |    Command    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | :-----------: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  **`geth`**   | Our main Altcoinchain CLI client. It is the entry point into the Altcoinchain network (main-, test- or private net), capable of running as a full node (default), archive node (retaining all historical state) or a light node (retrieving data live). It can be used by other processes as a gateway into the Altcoinchain network via JSON RPC endpoints exposed on top of HTTP, WebSocket and/or IPC transports. `geth --help` and the [CLI page](https://geth.ethereum.org/docs/interface/command-line-options) for command line options.          |
+|  **`geth`**   | Our main Go-Chain CLI client. It is the entry point into the Go-Chain network (main-, test- or private net), capable of running as a full node (default), archive node (retaining all historical state) or a light node (retrieving data live). It can be used by other processes as a gateway into the Go-Chain network via JSON RPC endpoints exposed on top of HTTP, WebSocket and/or IPC transports. `geth --help` and the [CLI page](https://geth.ethereum.org/docs/interface/command-line-options) for command line options.          |
 |   `clef`    | Stand-alone signing tool, which can be used as a backend signer for `geth`.  |
 |   `devp2p`    | Utilities to interact with nodes on the networking layer, without running a full blockchain. |
-|   `abigen`    | Source code generator to convert Altcoinchain contract definitions into easy to use, compile-time type-safe Go packages. It operates on plain [Altcoinchain contract ABIs](https://docs.soliditylang.org/en/develop/abi-spec.html) with expanded functionality if the contract bytecode is also available. However, it also accepts Solidity source files, making development much more streamlined. Please see our [Native DApps](https://geth.ethereum.org/docs/dapp/native-bindings) page for details. |
-|  `bootnode`   | Stripped down version of our Altcoinchain client implementation that only takes part in the network node discovery protocol, but does not run any of the higher level application protocols. It can be used as a lightweight bootstrap node to aid in finding peers in private networks.                                                                                                                                                                                                                                                                 |
+|   `abigen`    | Source code generator to convert Go-Chain contract definitions into easy to use, compile-time type-safe Go packages. It operates on plain [Go-Chain contract ABIs](https://docs.soliditylang.org/en/develop/abi-spec.html) with expanded functionality if the contract bytecode is also available. However, it also accepts Solidity source files, making development much more streamlined. Please see our [Native DApps](https://geth.ethereum.org/docs/dapp/native-bindings) page for details. |
+|  `bootnode`   | Stripped down version of our Go-Chain client implementation that only takes part in the network node discovery protocol, but does not run any of the higher level application protocols. It can be used as a lightweight bootstrap node to aid in finding peers in private networks.                                                                                                                                                                                                                                                                 |
 |     `evm`     | Developer utility version of the EVM (Ethereum Virtual Machine) that is capable of running bytecode snippets within a configurable environment and execution mode. Its purpose is to allow isolated, fine-grained debugging of EVM opcodes (e.g. `evm --code 60ff60ff --debug run`).                                                                                                                                                                                                                                                                     |
-|   `rlpdump`   | Developer utility tool to convert binary RLP ([Recursive Length Prefix](https://ethereum.org/en/developers/docs/data-structures-and-encoding/rlp)) dumps (data encoding used by the Altcoinchain protocol both network as well as consensus wise) to user-friendlier hierarchical representation (e.g. `rlpdump --hex CE0183FFFFFFC4C304050583616263`).                                                                                                                                                                                                                                 |
-|   `puppeth`   | a CLI wizard that aids in creating a new Altcoinchain network.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|   `rlpdump`   | Developer utility tool to convert binary RLP ([Recursive Length Prefix](https://ethereum.org/en/developers/docs/data-structures-and-encoding/rlp)) dumps (data encoding used by the Go-Chain protocol both network as well as consensus wise) to user-friendlier hierarchical representation (e.g. `rlpdump --hex CE0183FFFFFFC4C304050583616263`).                                                                                                                                                                                                                                 |
+|   `puppeth`   | a CLI wizard that aids in creating a new Go-Chain network.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 ## Running `geth`
 
@@ -98,9 +98,9 @@ Recommended:
 * High Performance SSD with at least 20GB free space
 * 25+ MBit/sec download Internet service
 
-### Full node on the main Altcoinchain network
+### Full node on the main Go-Chain network
 
-By far the most common scenario is people wanting to simply interact with the Altcoinchain
+By far the most common scenario is people wanting to simply interact with the Go-Chain
 network: create accounts; transfer funds; deploy and interact with contracts. For this
 particular use-case the user doesn't care about years-old historical data, so we can
 sync quickly to the current state of the network. To do so:
@@ -112,7 +112,7 @@ $ geth console
 This command will:
  * Start `geth` in snap sync mode (default, can be changed with the `--syncmode` flag),
    causing it to download more data in exchange for avoiding processing the entire history
-   of the Altcoinchain network, which is very CPU intensive.
+   of the Go-Chain network, which is very CPU intensive.
  * Start up `geth`'s built-in interactive [JavaScript console](https://geth.ethereum.org/docs/interface/javascript-console),
    (via the trailing `console` subcommand) through which you can interact using [`web3` methods](https://github.com/ChainSafe/web3.js/blob/0.20.7/DOCUMENTATION.md) 
    (note: the `web3` version bundled within `geth` is very old, and not up to date with official docs),
@@ -141,13 +141,13 @@ $ geth --your-favourite-flags dumpconfig
 
 #### Docker quick start
 
-One of the quickest ways to get Altcoinchain up and running on your machine is by using
+One of the quickest ways to get Go-Chain up and running on your machine is by using
 Docker:
 
 ```shell
-docker run -d --name altcoinchain-node -v /Users/alice/altcoinchain:/root \
+docker run -d --name go-chain-node -v /Users/alice/go-chain:/root \
            -p 8545:8545 -p 30303:30303 \
-           altcoinchain/client-go
+           go-chain/client-go
 ```
 
 This will start `geth` in snap-sync mode with a DB memory allowance of 1GB just as the
@@ -162,7 +162,7 @@ accessible from the outside.
 ### Programmatically interfacing `geth` nodes
 
 As a developer, sooner rather than later you'll want to start interacting with `geth` and the
-Altcoinchain network via your own programs and not manually through the console. To aid
+Go-Chain network via your own programs and not manually through the console. To aid
 this, `geth` has built-in support for a JSON-RPC based APIs ([standard APIs](https://ethereum.github.io/execution-apis/api-documentation/)
 and [`geth` specific APIs](https://geth.ethereum.org/docs/rpc/server)).
 These can be exposed via HTTP, WebSockets and IPC (UNIX sockets on UNIX based
@@ -196,7 +196,7 @@ can reuse the same connection for multiple requests!
 
 **Note: Please understand the security implications of opening up an HTTP/WS based
 transport before doing so! Hackers on the internet are actively trying to subvert
-Altcoinchain nodes with exposed APIs! Further, all browser tabs can access locally
+Go-Chain nodes with exposed APIs! Further, all browser tabs can access locally
 running web servers, so malicious web pages could try to subvert locally available
 APIs!**
 
@@ -297,8 +297,8 @@ also need to configure a miner to process transactions and create new blocks for
 
 #### Running a private miner
 
-Mining on the public Altcoinchain network is a complex task as it's only feasible using GPUs, FPGAs and ASICs. For information on such a
-setup, please consult the [Altcoinchain discord](https://discord.gg/hcXHyQP4Je).
+Mining on the public Go-Chain network is a complex task as it's only feasible using GPUs, FPGAs and ASICs. For information on such a
+setup, please consult the [Go-Chain discord](https://discord.gg/hcXHyQP4Je).
 
 In a private network setting, however a single CPU miner instance is more than enough for
 practical purposes as it can produce a stable stream of blocks at the correct intervals
@@ -320,7 +320,7 @@ transactions are accepted at (`--miner.gasprice`).
 Thank you for considering to help out with the source code! We welcome contributions
 from anyone on the internet, and are grateful for even the smallest of fixes!
 
-If you'd like to contribute to go-altcoinchain, please fork, fix, commit and send a pull request
+If you'd like to contribute to go-chain, please fork, fix, commit and send a pull request
 for the maintainers to review and merge into the main code base. If you wish to submit
 more complex changes though, please check up with the core devs first on [our Discord Server](https://discord.gg/invite/nthXNEv)
 to ensure those changes are in line with the general philosophy of the project and/or get
