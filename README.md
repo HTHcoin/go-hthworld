@@ -32,7 +32,7 @@ sudo cp build/bin/geth /usr/local/bin/
 
 ```
 
-## Start GoC Go-HTHWorld
+## Start HTH Go-HTHWorld
 
 create an account```
 geth account new --datadir /path/to/data/dir```
